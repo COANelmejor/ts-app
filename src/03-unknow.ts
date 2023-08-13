@@ -6,7 +6,7 @@ anyVar = true;
 anyVar = null;
 anyVar = undefined;
 
-anyVar.doSomething(); // It could no exists. Like in javascript
+// anyVar.doSomething(); // It could no exists. Like in javascript. It not throws an error but it could fail in runtime
 
 // ----------------------------
 
