@@ -1,4 +1,3 @@
-import { products } from "./products/product.service";
 import { addProduct } from "./products/product.service";
 
 addProduct({
