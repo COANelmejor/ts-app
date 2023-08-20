@@ -15,17 +15,6 @@ for (let i = 0; i < 50; i++) {
     tags: faker.helpers.multiple(faker.commerce.productAdjective, {
       count: { min: 1, max: 5 },
     }),
-    // Posible solución usando arrayElements
-    // tags: faker.helpers.arrayElements(
-    //   [
-    //     faker.commerce.productAdjective(),
-    //     faker.commerce.productAdjective(),
-    //     faker.commerce.productAdjective(),
-    //     faker.commerce.productAdjective(),
-    //     faker.commerce.productAdjective(),
-    //   ],
-    //   { min: 1, max: 5 }
-    // ),
     price: parseInt(faker.commerce.price({ min: 0, max: 150 }), 10),
     createdAt: faker.date.past(),
     updatedAt: faker.date.recent(),
