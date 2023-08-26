@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker'; // importamos el faker en español
 
-import { addProduct, products } from './products/product.service';
+import { addProduct, products, updateProduct } from './products/product.service';
 
 for (let i = 0; i < 50; i++) {
   faker.seed(i); // semilla para obtener datos consistentes
@@ -22,3 +22,8 @@ for (let i = 0; i < 50; i++) {
 }
 
 console.log(products);
+const producto0 = products[0];
+
+updateProduct(producto0.id, {
+  stock: 80
+})
