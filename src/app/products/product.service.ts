@@ -22,7 +22,7 @@ export const addProduct = (data: CreateProductDto) : Product => {
   return newProduct;
 }
 
-export const updateProduct = (id: string, changes: UpdateProductDto): Product => {
+export const updateProduct = (id: Product['id'], changes: UpdateProductDto): Product => {
   const index = products.findIndex((product) => product.id === id)
   if (index === -1) {
     throw new Error('Product not found')
