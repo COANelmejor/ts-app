@@ -13,7 +13,9 @@ export interface UpdateProductDto extends Partial<CreateProductDto> {}
 // Example of Required
 type exampleRequired = Required<CreateProductDto>;
 
-export interface FindProductDto extends Readonly<Partial<Product>> {}
+export interface FindProductDto extends Readonly<Partial<Omit<Product, 'tags'>>> {
+  readonly tags: ReadonlyArray<string>;
+}
 
 // Example of Readonly
 type exampleReadonly = Readonly<Product>;
